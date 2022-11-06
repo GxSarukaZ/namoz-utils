@@ -33,9 +33,9 @@ public abstract class PlayerRendererMixin extends LivingEntityRenderer<AbstractC
         float time = (float) abstractClientPlayer.tickCount;
         if (!abstractClientPlayer.isInvisible() && abstractClientPlayer.getName().getString().equals("NamoZDizeX")) {
             modelPart.xRot = 0.0f;
-            modelPart.render(poseStack, multiBufferSource.getBuffer(RenderType.eyes(new ResourceLocation("namozutils", "textures/entity/special-skin/herrscher_of_the_summer.png"))), i, OverlayTexture.NO_OVERLAY, GlowingNamoZLayer.makeFade(time), GlowingNamoZLayer.makeFade(time), GlowingNamoZLayer.makeFade(time), 1.0F);
+            modelPart.render(poseStack, multiBufferSource.getBuffer(RenderType.eyes(new ResourceLocation("namozutils", "textures/entity/special-skin/tsurara_path.png"))), i, OverlayTexture.NO_OVERLAY, GlowingNamoZLayer.makeFade(time), GlowingNamoZLayer.makeFade(time), GlowingNamoZLayer.makeFade(time), 1.0F);
             modelPart2.xRot = 0.0f;
-            modelPart2.render(poseStack, multiBufferSource.getBuffer(RenderType.dragonExplosionAlpha(new ResourceLocation("namozutils", "textures/entity/special-skin/herrscher_of_the_summer.png"))), i, OverlayTexture.NO_OVERLAY, GlowingNamoZLayer.makeFade(time), GlowingNamoZLayer.makeFade(time), GlowingNamoZLayer.makeFade(time), 1.0F);
+            modelPart2.render(poseStack, multiBufferSource.getBuffer(RenderType.dragonExplosionAlpha(new ResourceLocation("namozutils", "textures/entity/special-skin/tsurara_path.png"))), i, OverlayTexture.NO_OVERLAY, GlowingNamoZLayer.makeFade(time), GlowingNamoZLayer.makeFade(time), GlowingNamoZLayer.makeFade(time), 1.0F);
         }
     }
 }

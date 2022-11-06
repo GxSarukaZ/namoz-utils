@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.namozdizex.namozcatia.NamoZcatiaMod;
 
 @Environment(EnvType.CLIENT)
 public class GlowingNamoZLayer extends RenderLayer<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>>
@@ -30,9 +31,11 @@ public class GlowingNamoZLayer extends RenderLayer<AbstractClientPlayer, PlayerM
     @Override
     public void render(PoseStack poseStack, MultiBufferSource multiBufferSource, int i, AbstractClientPlayer entity, float f, float g, float h, float j, float k, float l) {
         float time = Minecraft.getInstance().getDeltaFrameTime() + entity.tickCount;
-        if (entity.getName().getString().equals("NamoZDizeX")) {
-            VertexConsumer inveterate = multiBufferSource.getBuffer(RenderType.eyes(new ResourceLocation("namozutils", "textures/entity/special-skin/herrscher_of_the_summer.png")));
+        if (!entity.isInvisible() && NamoZcatiaMod.CONFIG.main.glowingSkin) {
+            if (entity.getName().getString().equals("NamoZDizeX")) {
+            VertexConsumer inveterate = multiBufferSource.getBuffer(RenderType.eyes(new ResourceLocation("namozutils", "textures/entity/special-skin/tsurara_path.png")));
             this.getParentModel().renderToBuffer(poseStack, inveterate, i, OverlayTexture.NO_OVERLAY, makeFade(time), makeFade(time), makeFade(time), 1.0F);
+            }
         }
     }
 }

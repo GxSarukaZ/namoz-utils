@@ -7,7 +7,9 @@
   ],
   "client": [
     "NamoZcatiaMixin",
-    "PlayerRendererMixin"
+    "PlayerRendererMixin",
+    "DrownedGlowingMixin",
+    "BlazeGlowingMixin"
   ],
   "injectors": {
     "defaultRequire": 1

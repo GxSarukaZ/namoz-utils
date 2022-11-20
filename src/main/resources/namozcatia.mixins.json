@@ -6,10 +6,9 @@
   "mixins": [
   ],
   "client": [
-    "NamoZcatiaMixin",
     "PlayerRendererMixin",
-    "DrownedGlowingMixin",
-    "BlazeGlowingMixin"
+    "monster.DrownedGlowingMixin",
+    "monster.BlazeGlowingMixin"
   ],
   "injectors": {
     "defaultRequire": 1
